@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Workers</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div>
+        <h3>Поиск по номеру сотрудника</h3>
+        <form name="findWorkerNum">
+            <input id="inputNum">
+            <button id="buttonNum">Подтвердить</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Поиск по имени сотрудника</h3>
+        <form name="findWorkerName">
+            <input id="inputName" placeholder="Иван">
+             <button>Подтвердить</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Поиск по фамилии сотрудника</h3>
+        <form name="findWorkerLastName" action="twolist.html">
+            <input type="text" id="inputLastName" placeholder="Иванов">
+            <button onclick="outputLastNameOnTwoList();">Подтвердить</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Информация о всех сотрудниках</h3>
+        <button id="output_all_workers">Вывод</button>
+    </div>
+
+    <p><a href="company.net/new">Новый сотрудник</a></p>
+
+    <table id="table" border="1" cellspacing="5" cellpadding="4" width="5" height="8">
+        <tr>
+            <th></th>
+            <th>Номер сотрудника</th>
+            <th>Имя сотрудника</th>
+            <th>Должность сотрудника</th>
+            <th>Дата принятия на работу</th>
+            <th>Департамент</th>
+            <th>Удаление сотрудника</th>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/0">0</a></td>
+            <td>Григорий</td>
+            <td>Team-lead</td>
+            <td>
+                <time>01-01-2021</time>
+            </td>
+            <td>Development</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/1">1</a></td>
+            <td>Афанасий</td>
+            <td>Старший разработчик</td>
+            <td>
+                <time>11-05-2021</time>
+            </td>
+            <td>Development</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/2">2</a></td>
+            <td>Эдуард</td>
+            <td>Младший разработчик</td>
+            <td>
+                <time>01-06-2020</time>
+            </td>
+            <td>Development</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/3">3</a></td>
+            <td>Линар</td>
+            <td>Младший разработчик</td>
+            <td>
+                <time>21-09-2020</time>
+            </td>
+            <td>Development</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/4">4</a></td>
+            <td>Илья</td>
+            <td>Middle-разработчик</td>
+            <td>
+                <time>01-12-2019</time>
+            </td>
+            <td>Development</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/5">5</a></td>
+            <td>Евгений</td>
+            <td>Системный администратор</td>
+            <td>
+                <time>01-02-2021</time>
+            </td>
+            <td>Services</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/6">6</a></td>
+            <td>Ульяна</td>
+            <td>Менеджер</td>
+            <td>
+                <time>14-10-2018</time>
+            </td>
+            <td>Business IT</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/7">7</a></td>
+            <td>Геннадий</td>
+            <td>Менеджер</td>
+            <td>
+                <time>30-11-2019</time>
+            </td>
+            <td>Business IT</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/8">8</a></td>
+            <td>Ильфат</td>
+            <td>Middle-разработчик</td>
+            <td>
+                <time>01-08-2021</time>
+            </td>
+            <td>Development</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/9">9</a></td>
+            <td>Никита</td>
+            <td>Младший разработчик</td>
+            <td>
+                <time>12-07-2021</time>
+            </td>
+            <td>Development</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type=checkbox></td>
+            <td><a href="company.net/worker/10">10</a></td>
+            <td>Зинаида</td>
+            <td>Старший разработчик</td>
+            <td>
+                <time>15-04-2019</time>
+            </td>
+            <td>Development</td>
+            <td class = "deleteRow"><a>Удалить</a></td>
+        </tr>
+    </table>
+    <script src="code.js"></script>
+</body>
+</html>
